@@ -1,0 +1,566 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0, 0.3)),
+                    url("../img/background.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: white;
+  min-width: 400px;
+
+  font-family: "Montserrat";
+}
+
+header {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.2));
+  flex-basis: 100%;
+  text-align: center;
+  backdrop-filter: blur(3px);
+  margin: 0 auto 10px auto;
+  border-radius: 0 0 10px 10px;
+  padding: 10px 10px;
+  max-width: 1400px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+header h1 {
+  flex: 1 1 200px;
+  min-width: 0;
+  font-weight: 800;
+  font-size: clamp(2.5em, 5vw, 5em);
+  letter-spacing: 3px;
+  margin: 0;
+  background: linear-gradient(to right, #fff 50%, #4a4a4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2{
+  flex-basis: 100%;
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: 2px;
+  margin: 0 10px;
+  color: #ffffff;
+  background: linear-gradient(to right, #fff 70%, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header img {
+  flex: 0 0 auto;
+  height: 120px;
+  width: auto;
+  border-radius: 25%;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: minmax(300px, 400px) minmax(300px, 400px) minmax(360px, 1fr);
+  gap: 20px;
+}
+
+main > *:not(#links_row), .links {
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: 0 0 30px rgb(0, 105, 42, 0.5);
+  transition: 0.75s ease;
+}
+
+main > *:not(#links_row):hover, .links:hover {
+  box-shadow: 0 0 20px rgb(0, 105, 42, 1);
+}
+
+#photocv, #python, #techstack{
+  display: flex;
+  background-color:  rgba(0,0,0, 0.1);
+  padding: 10px;
+  align-items: center;
+
+}
+
+#photocv img, #python img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#photocv {
+  grid-column: 1;
+}
+
+#python {
+  grid-column: 2;
+}
+
+#techstack {
+  grid-column: 3;
+  flex-direction: column;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  transition: 0.1s;
+}
+
+.skill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.column-stack {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skill-header {
+  font-weight: bold;
+}
+
+.skill, .skill-header {
+  background-color: rgba(65, 105, 225, 0.2);
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 5px;
+  white-space: nowrap;
+  border: 2px solid transparent;
+}
+
+.skill:hover, .skill-header:hover{
+  font-size: 14px;
+  margin: -2px -2px;
+}
+
+#links_row {
+  grid-column: 1 / 3;
+  grid-row: 2;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.links {
+  background-color: rgba(65, 105, 225, 0.2);
+  font-size: 50px;
+  place-items: center;
+  display: grid;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.75s;
+}
+
+.links:hover {
+  background-color: rgba(65, 105, 225, 0.35);
+  transform: scale(1.05);
+}
+
+#rag {
+  background-color: rgba(255, 255, 0, 0.2);
+  grid-column: 3;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#rag form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+}
+
+#ask_me, #submit_btn {
+
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 0, 0.5);
+  border-radius: 5px;
+  background-color: rgb(0, 105, 42, 0.2);
+  outline: none;
+  resize: none;
+  font-family: "Montserrat";
+  color: white;
+}
+
+#ask_me {
+  width: 100%;
+  flex-grow: 1;
+  margin-bottom: 5px;
+  field-sizing: content;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+#submit_btn {
+  cursor: pointer;
+}
+
+#button {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+}
+
+#submit_btn {
+}
+
+#counter {
+  font-size: 12px;
+  text-align: right;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  box-shadow:  0 0 40px rgba(255, 255, 0, 0.7);
+}
+
+#rag:hover .tooltip {
+  opacity: 1;
+}
+
+footer {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.1));
+  flex-basis: 100%;
+  min-height: 30px;
+  text-align: center;
+  padding: 10px;
+  backdrop-filter: blur(3px);
+  margin-top: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+@media (max-width: 960px) {
+  main {
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+
+  #photocv {
+    grid-column: 1;
+  }
+
+  #python {
+    grid-column: 2;
+  }
+
+  #techstack {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #links_row {
+    grid-column: 1/3;
+    grid-row: 3;
+  }
+
+  #rag {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  #photocv, #python, #techstack, #rag, #links_row {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  #links_row {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: 5;
+  }
+}
+
+@media (max-width: 420px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  #links_row {
+  grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

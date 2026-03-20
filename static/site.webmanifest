@@ -1,0 +1,20 @@
+{
+  "short_name": "Tomasz",
+  "name": "Tomasz Litwicki | Python Developer",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa",
+  "display": "standalone"
+}
