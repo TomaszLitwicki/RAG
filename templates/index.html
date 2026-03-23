@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tomasz Litwicki | Python Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../static/css/style.css">
   <link rel="stylesheet" href="../static/css/fontello.css">
 
@@ -103,16 +103,21 @@
       </a>
     </div>
 
-    <div id="rag" title="">
-      <form action="/ask-me" method="post">
+    <div class="rag" id="writing">
+      <form action="/" method="post">
         <textarea id="ask_me" name="ask" placeholder="RAG: Type your question..." maxlength="150"></textarea>
         <div id="button">
-          <button type="button" id="submit_btn">Send Message</button>
+          <button type="submit" id="submit_btn">Ask My AI</button>
           <div id="counter">Remaining characters: <span>150</span> </div>
         </div>
       </form>
-    <span class="tooltip">Chat AI w oparciu o technologię RAG, czyli &quot;Sztuczna Inteligencja&quot; odpowie na Twoje pytanie w oparciu o przygotowaną przeze mnie bazę informacji. Możesz zapytać o moją wiedzę z dziedziny IT, metodykę jej zdobywania, sposób myślenia programistycznego, lub wykonane projekty. Np: 'Z jakich techonologii korzystał Tomasz w swym głównym projekcie?'.</span>
+      <span class="tooltip"><b><u>Funkcjonalność jeszcze w budowie</u></b><br> AI w oparciu o technologię RAG, czyli &quot;Sztuczna Inteligencja&quot; odpowie na Twoje pytanie w oparciu o przygotowaną przeze mnie bazę informacji. Możesz zapytać o moją wiedzę z dziedziny IT, metodykę jej zdobywania, sposób myślenia programistycznego, lub wykonane projekty. Np: 'Z jakich techonologii korzystał Tomasz w swym głównym projekcie?'.</span>
     </div>
+    {% if question %}
+      <div class="rag" id="question"><u><b>{{ titles[0] }}</b></u>{{ question }}</div>
+      <div class="rag" id="sources"><u><b>{{ titles[1] }}</b></u>{{ sources }}</div>
+      <div class="rag" id="answer"><u><b>{{ titles[2] }}</b></u>{{ answer }}</div>
+    {% endif %}
   </main>
   <footer><h2>Personal Landing Page - Python Developer &copy; 2026</h2></footer>
 

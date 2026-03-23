@@ -92,3 +92,5 @@ node_modules/
 # Deployment / local config
 # -----------------------------
 .python-version
+/data/memory.csv
+/rag.zip
