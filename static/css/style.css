@@ -421,14 +421,14 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  #photocv, #python, #techstack, .rag, #links_row {
+  #photocv, #python, #techstack, .rag, #links_row, #writing, #question, #sources, #answer {
     grid-column: 1;
     grid-row: auto;
   }
 
   #links_row {
     grid-template-columns: repeat(2, 1fr);
-    grid-row: 5;
+    order: 8;
   }
 }
 
