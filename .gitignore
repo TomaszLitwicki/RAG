@@ -94,3 +94,4 @@ node_modules/
 .python-version
 /data/memory.csv
 /rag.zip
+/chunks/00_TEST_chunk.md
