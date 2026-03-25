@@ -1,15 +1,15 @@
 from pathlib import Path
 import yaml
 
-obecny_folder = Path.cwd()
-folder_chankow = obecny_folder.parent / "chunks"
+BASE_DIR = Path(__file__).resolve().parent.parent
+CHUNKS_DIR = BASE_DIR / "chunks"
+MANIFEST_PATH = CHUNKS_DIR / "00_manifest_index.md"
 
-if folder_chankow.exists():
-    print("Chunks folder exists")
+if CHUNKS_DIR.exists():
+    pass
 else:
     raise RuntimeError ("Chunk's folder does not exist")
 
-print(folder_chankow)
 
 def front_matter_and_body (text: str) -> tuple[dict, str]:
     text = text.strip()
@@ -36,15 +36,21 @@ def load_markdown_chunk (file_path: Path) -> dict:
 
     chunk = {
         "source_file": file_path.stem,
-        "body": body,
+        "content": body,
         **metadata,
     }
 
     return chunk
 
+
+def load_manifest () -> dict:
+    manifest = load_markdown_chunk(MANIFEST_PATH)
+
+    return manifest
+
 def load_all_chunks () -> list[dict]:
     chunks = []
-    for plik in folder_chankow.rglob("*.md"):
+    for plik in CHUNKS_DIR.rglob("*.md"):
         if plik.name.startswith("00"):
             continue
 
@@ -56,11 +62,14 @@ def load_all_chunks () -> list[dict]:
 
 if __name__ == '__main__':
     chunks = load_all_chunks()
+    manifest = load_manifest()
 
-    for chunk in chunks:
-        print("=" * 60)
-        print("ID:", chunk.get("id"))
-        print("CATEGORY:", chunk.get("category"))
-        print("TAGS:", chunk.get("tags"))
-        print("FILE:", chunk.get("source_file"))
-        print("CONTENT PREVIEW:\n", chunk.get("body", "")[:100])
+    print(manifest)
+
+    # for chunk in chunks:
+    #     print("=" * 60)
+    #     print("ID:", chunk.get("id"))
+    #     print("CATEGORY:", chunk.get("category"))
+    #     print("TAGS:", chunk.get("tags"))
+    #     print("FILE:", chunk.get("source_file"))
+    #     print("CONTENT PREVIEW:\n", chunk.get("content", "")[:100])

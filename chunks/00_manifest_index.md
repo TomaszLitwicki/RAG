@@ -7,7 +7,7 @@ audience:
   - rag_system
   - recruiter_chatbot
   - maintainer
-last_updated: 2026-03-18
+last_updated: 2026-03-24
 version: 1.0
 source_set: profile_chunks_v1
 chunks_total: 8
@@ -20,6 +20,190 @@ canonical_order:
   - 06_work_style_chunk.md
   - 07_goals_and_direction_chunk.md
   - 08_background_selected_chunk.md
+retrieval_priority:
+  A:
+    - 01_skills_technical_chunk
+    - 02_projects_chunk
+    - 03_tools_and_stack_chunk
+    - 06_work_style_chunk
+  B:
+    - 04_learning_path_chunk
+    - 05_career_transition_chunk
+    - 07_goals_and_direction_chunk
+  C:
+    - 08_background_selected_chunk
+
+query_routing:
+  technical:
+    - 01_skills_technical_chunk
+    - 03_tools_and_stack_chunk
+    - 02_projects_chunk
+  projects:
+    - 02_projects_chunk
+    - 01_skills_technical_chunk
+    - 03_tools_and_stack_chunk
+  work_style:
+    - 06_work_style_chunk
+    - 05_career_transition_chunk
+    - 01_skills_technical_chunk
+  learning_path:
+    - 04_learning_path_chunk
+    - 01_skills_technical_chunk
+    - 07_goals_and_direction_chunk
+  career_transition:
+    - 05_career_transition_chunk
+    - 06_work_style_chunk
+    - 08_background_selected_chunk
+  goals:
+    - 07_goals_and_direction_chunk
+    - 04_learning_path_chunk
+    - 02_projects_chunk
+  background:
+    - 08_background_selected_chunk
+    - 05_career_transition_chunk
+    - 02_projects_chunk
+
+intent_categories:
+  technical:
+    - skills_technical
+    - tools_and_stack
+    - projects
+  projects:
+    - projects
+    - skills_technical
+    - tools_and_stack
+  work_style:
+    - work_style
+    - career_transition
+    - skills_technical
+  learning_path:
+    - learning_path
+    - skills_technical
+    - goals_and_direction
+  career_transition:
+    - career_transition
+    - work_style
+    - background_selected
+  goals:
+    - goals_and_direction
+    - learning_path
+    - projects
+  background:
+    - background_selected
+    - career_transition
+    - projects
+
+default_bundles:
+  technical_summary:
+    - 01_skills_technical_chunk
+    - 03_tools_and_stack_chunk
+    - 02_projects_chunk
+  recruiter_profile_summary:
+    - 05_career_transition_chunk
+    - 06_work_style_chunk
+    - 07_goals_and_direction_chunk
+  portfolio_evidence:
+    - 02_projects_chunk
+    - 01_skills_technical_chunk
+    - 06_work_style_chunk
+  motivation_and_background:
+    - 05_career_transition_chunk
+    - 08_background_selected_chunk
+    - 07_goals_and_direction_chunk
+  learning_narrative:
+    - 04_learning_path_chunk
+    - 01_skills_technical_chunk
+    - 07_goals_and_direction_chunk
+
+intent_keywords:
+  technical:
+    - python
+    - flask
+    - sql
+    - sqlite
+    - mysql
+    - api
+    - rest
+    - git
+    - linux
+    - debugging
+    - testing
+    - technologie
+    - technologia
+    - technol
+    - stack
+    - narzędzia
+    - narzedzia
+    - backend
+    - rag
+    - ai
+    - umiejętności
+    - zna
+  projects:
+    - projekt
+    - projekty
+    - portfolio
+    - horseowner
+    - mvp
+    - mission-aipossible
+    - aplikacja
+    - aplikacje
+    - app
+  work_style:
+    - pracuje
+    - styl
+    - debugowanie
+    - samodzielnie
+    - ownership
+    - iteracyjnie
+    - współpraca
+    - wspolpraca
+  learning_path:
+    - nauka
+    - learning
+    - ścieżka
+    - sciezka
+    - progres
+    - kolejność
+    - kolejnosc
+    - uczy
+    - wiedzę
+    - wiedza
+  career_transition:
+    - przebranżowienie
+    - przebranzowienie
+    - zmiana
+    - branży
+    - branzy
+    - motywacja
+    - transferable
+  goals:
+    - cel
+    - cele
+    - stanowisko
+    - rola
+    - kierunek
+    - rozwój
+    - rozwoj
+    - plany
+  background:
+    - wcześn
+    - tło
+    - doświadcz
+    - koni
+    - ranczo
+    - soft
+    - kon
+    - jeździectwo
+    - western
+    - natural
+    - szkolenia
+    - aikido
+    - spadan
+    - psy
+    - pies
+    - psa
+
 ---
 
 # manifest/index
