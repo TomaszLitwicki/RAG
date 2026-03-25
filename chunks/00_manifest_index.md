@@ -173,8 +173,8 @@ intent_keywords:
     - przebranżowienie
     - przebranzowienie
     - zmiana
-    - branży
-    - branzy
+    - zmienia
+    - branz
     - motywacja
     - transferable
   goals:

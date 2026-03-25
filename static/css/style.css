@@ -276,16 +276,19 @@ main > *:not(#links_row):hover, .links:hover {
 #question {
   grid-column: 1;
   grid-row: 3;
+  white-space: pre-line;
 }
 
 #sources {
   grid-column: 2;
   grid-row: 3;
+  white-space: pre-line;
 }
 
 #answer {
   grid-column: 3;
   grid-row: 3;
+  white-space: pre-line;
 }
 
 #writing form {
