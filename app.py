@@ -4,6 +4,7 @@ from pathlib import Path
 
 from services.loader import load_manifest, load_all_chunks
 from services.retriever import retrieve_chunks, format_sources
+from services.llm import call_llm
 
 app = Flask(__name__)
 
@@ -44,7 +45,7 @@ def asking():
     selected_chunks = retrieve_chunks(question, chunks, manifest)
 
     sources = format_sources(selected_chunks)
-    answer = 'Here will be answer to your question'
+    answer = call_llm(question, selected_chunks)
 
     memory(question, answer)
 

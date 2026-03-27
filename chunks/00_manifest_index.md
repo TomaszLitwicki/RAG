@@ -132,13 +132,12 @@ intent_keywords:
     - technologia
     - technol
     - stack
-    - narzędzia
-    - narzedzia
+    - narzedzi
     - backend
     - rag
-    - ai
+    - sztuczna
+    - inteligencja
     - umiejętności
-    - zna
   projects:
     - projekt
     - projekty
@@ -149,6 +148,13 @@ intent_keywords:
     - aplikacja
     - aplikacje
     - app
+    - plp
+    - www
+    - personal
+    - landing
+    - page
+    - horse
+    - konie
   work_style:
     - pracuje
     - styl
