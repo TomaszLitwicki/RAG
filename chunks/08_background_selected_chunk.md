@@ -150,3 +150,18 @@ Nie chodzi o szeroką opowieść osobistą, ale o selekcję informacji, które m
 - wiarygodności zmiany branży.
 
 Dzięki temu `background_selected` pełni funkcję uzupełniającą wobec chunków `career_transition`, `work_style` i `projects`, bez dublowania ich treści i bez wchodzenia w zbędne szczegóły autobiograficzne.
+
+## Ranczo Rajczyn – fundament kompetencji szkoleniowych i komunikacyjnych
+Działalność Tomasza na Ranczo Rajczyn to okres intensywnego rozwoju jako przedsiębiorcy, trenera i szkoleniowca, udokumentowany m.in. na profilu Facebook Rancza. To doświadczenie wykracza poza standardową opiekę nad zwierzętami, wnosząc do profilu zawodowego Tomasza unikalne kompetencje:
+
+Autorski warsztat szkoleniowy i bezpieczeństwo: Tomasz realizował autorskie programy edukacyjne w całej Polsce, w tym innowacyjne szkolenia z bezpiecznego spadania z konia, w których wykorzystywał swoje wieloletnie doświadczenie ze sztuk walki (Aikido). Uczył jeźdźców świadomej komunikacji z końmi opartej na metodach naturalnych (natural horsemanship), co wymagało precyzji w przekazywaniu złożonej wiedzy.
+
+Facylitacja i praca z grupą: Prowadzenie warsztatów facylitatorskich dla młodzieży rozwinęło u niego umiejętność zarządzania dynamiką grupy oraz wspierania procesów rozwojowych, gdzie koń pełnił rolę partnera w budowaniu empatii i pewności siebie uczestników.
+
+Zarządzanie marką i komunikacja (Content Design): Tomasz przykładał ogromną wagę do staranności redagowania treści publikowanych w mediach społecznościowych. Jego posty, cechujące się merytoryką i wysoką jakością językową, spotykały się z bardzo pozytywnym odbiorem społeczności.
+
+Zmysł wizualny i dbałość o detal: Uzupełnieniem komunikacji była umiejętność wykonywania profesjonalnych zdjęć, które nie tylko przyciągały uwagę, ale perfekcyjnie oddawały autentyczną atmosferę Rancza. Ta dbałość o estetykę i przekaz wizualny przekłada się dziś na staranność w projektowaniu interfejsów i dokumentacji technicznej.
+
+Przejście z inżynierii do własnego biznesu: Budowa Rancza od podstaw była świadomą decyzją o odejściu od pracy korporacyjnej na rzecz pełnej samodzielności operacyjnej. Pokazuje to zdolność Tomasza do planowania złożonych projektów (od logistyki po budowanie relacji z klientami) i doprowadzania ich do sukcesu rynkowego.
+
+To doświadczenie stanowi bezpośrednią genezę projektu HorseOwner MVP i jest dowodem na to, że Tomasz potrafi łączyć głęboką wiedzę domenową z profesjonalną komunikacją i techniczną rzetelnością.

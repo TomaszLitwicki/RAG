@@ -57,11 +57,11 @@ query_routing:
   goals:
     - 07_goals_and_direction_chunk
     - 04_learning_path_chunk
-    - 02_projects_chunk
+    - 08_background_selected_chunk
   background:
     - 08_background_selected_chunk
     - 05_career_transition_chunk
-    - 02_projects_chunk
+    - 07_goals_and_direction_chunk
 
 intent_categories:
   technical:
@@ -86,12 +86,12 @@ intent_categories:
     - background_selected
   goals:
     - goals_and_direction
-    - learning_path
-    - projects
+    - career_transition
+    - background_selected
   background:
     - background_selected
     - career_transition
-    - projects
+    - goals_and_direction
 
 default_bundles:
   technical_summary:
@@ -128,25 +128,25 @@ intent_keywords:
     - linux
     - debugging
     - testing
-    - technologie
-    - technologia
     - technol
     - stack
     - narzedzi
-    - backend
+    - back
+    - front
+    - full
     - rag
     - sztuczna
-    - inteligencja
-    - umiejętności
+    - inteligencj
+    - umiejetn
   projects:
     - projekt
-    - projekty
     - portfolio
     - horseowner
     - mvp
-    - mission-aipossible
-    - aplikacja
-    - aplikacje
+    - mission
+    - ai
+    - possible
+    - aplikacj
     - app
     - plp
     - www
@@ -154,7 +154,6 @@ intent_keywords:
     - landing
     - page
     - horse
-    - konie
   work_style:
     - pracuje
     - styl
@@ -162,44 +161,40 @@ intent_keywords:
     - samodzielnie
     - ownership
     - iteracyjnie
-    - współpraca
     - wspolpraca
+    - cech
   learning_path:
     - nauka
     - learning
-    - ścieżka
     - sciezka
     - progres
-    - kolejność
     - kolejnosc
     - uczy
-    - wiedzę
-    - wiedza
+    - wiedz
   career_transition:
-    - przebranżowienie
-    - przebranzowienie
+    - przebranz
     - zmiana
     - zmienia
     - branz
     - motywacja
     - transferable
+    - decyzj
   goals:
     - cel
-    - cele
     - stanowisko
     - rola
     - kierunek
-    - rozwój
     - rozwoj
     - plany
+    - przyszl
+    - prac
   background:
     - wcześn
     - tło
     - doświadcz
-    - koni
     - ranczo
     - soft
-    - kon
+    - koni
     - jeździectwo
     - western
     - natural
@@ -209,6 +204,8 @@ intent_keywords:
     - psy
     - pies
     - psa
+    - warsztat
+    - rajczyn
 
 ---
 

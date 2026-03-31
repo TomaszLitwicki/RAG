@@ -94,7 +94,7 @@ def score_chunk(question: str, chunk: dict, preferred_sources: list[str], prefer
         score = 12 - (position * 2)
 
     if category and category in preferred_categories:
-        score += 6
+        score += 3
 
     for token in question_tokens:
         for tag in tags:
@@ -123,7 +123,7 @@ def retrieve_chunks (question: str, chunks: list[dict], manifest: dict, top_k = 
     for chunk in chunks:
         chunk_score = score_chunk(question, chunk, preferred_source,preferred_categories)
 
-        if chunk_score > min_score:
+        if chunk_score >= min_score:
             scored_chunks.append(
                 {
                     **chunk,
@@ -163,6 +163,9 @@ if __name__ == '__main__':
     ask = "Czy tomasz lubi psy?"
     ask = "Dlaczego zmienia branżę"
     ask = "Dlaczego konie?"
+    ask = "Dlaczego kończy pracę na Rancho?"
+    ask = "Jaki wpływa praca na Ranczo Rajczyn będzie miała na pracę w IT?"
+    ask = "Jakie umiejętności posiada TOmasz?"
     manifest = load_manifest()
     chunks = load_all_chunks()
 

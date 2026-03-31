@@ -1,7 +1,6 @@
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
-from app import session
 
 load_dotenv()
 AI_KEY = os.getenv("OPENAI_API_KEY")
@@ -17,6 +16,7 @@ SYSTEM_PROMPT = """
         If the context is insufficient, say that clearly.
         Keep the answer factual, concise, and trustworthy.
         Use the same language as the user's question.
+        Don’t ask any questions
     """
 
 def build_contex(selected_chunks: list[dict]) -> str:
@@ -47,6 +47,7 @@ def build_prompt(question, contex):
         "TASK:\n"
         "Answer the user's question using only the context above. "
         "If the answer is partially supported, say what is supported and what is uncertain. "
+        "Don’t make things up out of thin air that aren’t in the sources and cannot be verified."
         "If the answer is not in the context, say that you cannot confirm it from the current knowledge base.")
 
     return prompt
@@ -72,10 +73,18 @@ def call_llm(question: str, selected_chunks: list[dict]) -> str:
 
     return answer
 
-ask = session
 
 if __name__ == "__main__":
-    message = "Jaki jest główny projekt Tomasza"
-    response = call_llm(message)
-    print(type(response))
+    from services.loader import load_manifest, load_all_chunks
+    from services.retriever import retrieve_chunks
+
+    question = "Jaki jest główny projekt Tomasza"
+    question = "Dlaczego kończy pracę na Rancho?"
+    question = "Jaki wpływa praca na Ranczo Rajczyn będzie miała na pracę w IT?"
+
+    manifest = load_manifest()
+    chunks = load_all_chunks()
+    selected_chunks = retrieve_chunks(question, chunks, manifest)
+    response = call_llm(question, selected_chunks)
+    print(response)
 

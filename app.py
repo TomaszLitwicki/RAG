@@ -1,6 +1,8 @@
+import csv
+import os
+
 from flask import Flask, render_template, request, redirect, url_for, session
 import datetime
-from pathlib import Path
 
 from services.loader import load_manifest, load_all_chunks
 from services.retriever import retrieve_chunks, format_sources
@@ -56,8 +58,15 @@ def asking():
     return redirect(url_for('home'))
 
 def memory(ask, answ):
-    with open('data/memory.csv', 'a') as memo:
-        memo.write(f'{datetime.datetime.now()}\t{ask}\t{answ}\n')
+    file_path = 'data/memory.csv'
+    field_names = ['Date_time', 'Question', 'Answer']
+    file_exist = os.path.isfile(file_path)
+    formated_answer = answ.replace('\n',' ').replace('\t',' ').strip()
+    with open('data/memory.csv', 'a', encoding='utf-8', newline='') as memo:
+        csv_writer = csv.DictWriter(memo, fieldnames=field_names, quoting=csv.QUOTE_ALL, delimiter=';')
+        if not file_exist or os.stat(file_path).st_size == 0:
+            csv_writer.writeheader()
+        csv_writer.writerow({'Date_time': datetime.datetime.now(), 'Question': ask, 'Answer': formated_answer})
 
 if __name__ == '__main__':
     app.run(debug=True)
