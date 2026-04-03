@@ -64,11 +64,11 @@ if __name__ == '__main__':
     chunks = load_all_chunks()
     manifest = load_manifest()
 
-    print(manifest)
+    # print(manifest)
 
-    # for chunk in chunks:
+    for chunk in chunks:
     #     print("=" * 60)
-    #     print("ID:", chunk.get("id"))
+         print("ID:", chunk.get("id"))
     #     print("CATEGORY:", chunk.get("category"))
     #     print("TAGS:", chunk.get("tags"))
     #     print("FILE:", chunk.get("source_file"))

@@ -15,8 +15,10 @@ SYSTEM_PROMPT = """
         Do not exaggerate seniority, commercial experience, or project scope.
         If the context is insufficient, say that clearly.
         Keep the answer factual, concise, and trustworthy.
+        Stick to the questions, but pay particular attention to soft skills.
+        Demonstrate how experience to date has helped develop unique soft skills that are useful in IT
         Use the same language as the user's question.
-        Don’t ask any questions
+        Don’t ask any questions, and don’t suggest continuing the conversation
     """
 
 def build_contex(selected_chunks: list[dict]) -> str:
@@ -44,11 +46,7 @@ def build_prompt(question, contex):
     prompt = (
         f"USER QUESTION: {question}"
         f"CONTEX: {contex}"
-        "TASK:\n"
-        "Answer the user's question using only the context above. "
-        "If the answer is partially supported, say what is supported and what is uncertain. "
-        "Don’t make things up out of thin air that aren’t in the sources and cannot be verified."
-        "If the answer is not in the context, say that you cannot confirm it from the current knowledge base.")
+        "TASK: Answer the user's question using only the context above. ")
 
     return prompt
 
@@ -78,9 +76,10 @@ if __name__ == "__main__":
     from services.loader import load_manifest, load_all_chunks
     from services.retriever import retrieve_chunks
 
-    question = "Jaki jest główny projekt Tomasza"
-    question = "Dlaczego kończy pracę na Rancho?"
-    question = "Jaki wpływa praca na Ranczo Rajczyn będzie miała na pracę w IT?"
+    # question = "Jaki jest główny projekt Tomasza"
+    # question = "Dlaczego kończy pracę na Rancho?"
+    # question = "Jak dotychczasowa praca na Ranczo Rajczyn będzie miała wpływ na pracę w IT?"
+    question = "Jakie wykształcenie ma Tomasz i jaki to ma wpływa na umiejętności programowania?"
 
     manifest = load_manifest()
     chunks = load_all_chunks()

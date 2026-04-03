@@ -5,10 +5,13 @@ from services.loader import load_manifest, load_all_chunks
 
 
 def normalize_text(text:str) -> str:
+    polish_map = str.maketrans(
+        "ąćęłńóśźż",
+        "acelnoszz"
+    )
     text = str(text).lower().strip()
-    text = unicodedata.normalize("NFKD", text)
-    text = "".join(char for char in text if not unicodedata.combining(char))
-    return text
+
+    return text.translate(polish_map)
 
 
 def normalize_source_name(name: str) -> str:
@@ -20,7 +23,7 @@ def normalize_source_name(name: str) -> str:
 
 def tokenize(text: str) -> list[str]:
     normalized_text = normalize_text(text)
-    return re.findall(r"[a-z0-9+\-#]+", normalized_text)
+    return re.findall(r"[a-z0-9+\-#]{2,}", normalized_text)
 
 
 def safe_list(value: Any) -> list[str]:
@@ -166,6 +169,7 @@ if __name__ == '__main__':
     ask = "Dlaczego kończy pracę na Rancho?"
     ask = "Jaki wpływa praca na Ranczo Rajczyn będzie miała na pracę w IT?"
     ask = "Jakie umiejętności posiada TOmasz?"
+    ask = "Jakie wykształcenie ma Tomasz i jaki to ma wpływa na umiejętności programowania?"
     manifest = load_manifest()
     chunks = load_all_chunks()
 
@@ -180,7 +184,7 @@ if __name__ == '__main__':
     preferred_categories = get_preferred_categories(query_type, manifest)
     print(f'Prefered categories : {preferred_categories}')
 
-    for i in range (8):
+    for i in range (9):
         score = score_chunk(ask, chunks[i], preferred_sources, preferred_categories)
         print(f'chunk 0{i+1} Score = {score}')
 

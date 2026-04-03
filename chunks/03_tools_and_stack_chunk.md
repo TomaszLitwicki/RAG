@@ -27,6 +27,11 @@ tags:
   - ollama
   - rag
   - tooling
+  - docker
+  - jira
+  - cicd
+  - sdlc
+  - solid
 ---
 
 # tools_and_stack
@@ -281,6 +286,19 @@ Rola w stacku:
 - porządkowanie pojęć, technologii i roadmapy
 - zaplecze merytoryczne pod przyszłe portfolio RAG
 
+### Jira
+Narzędzie do zarządzania zadaniami i workflow projektowym.
+- praca w zespole w oparciu o ticketowanie zadań
+- orientacja w statusach zadań (To Do, In Progress, Review, Done)
+- rozumienie przepływu pracy w metodykach zwinnych
+
+### Docker
+Podstawy konteneryzacji aplikacji.
+- budowanie prostych obrazów (Dockerfile)
+- uruchamianie kontenerów i zarządzanie ich stanem
+- izolacja środowiska aplikacji od systemu operacyjnego
+- świadomość roli Dockera w zapewnianiu powtarzalności środowisk (local vs production)
+
 ### Jupyter / VS Code
 Narzędzia uzupełniające, używane pomocniczo do testowania fragmentów kodu i eksploracji danych.
 
@@ -346,6 +364,29 @@ Znaczenie:
 
 ---
 
+## Metodyki, procesy i dobre praktyki
+
+### CI/CD (Continuous Integration / Continuous Deployment)
+Zrozumienie procesów automatyzacji w cyklu życia oprogramowania.
+- świadomość potrzeby automatycznego uruchamiania testów przy każdym commicie (CI)
+- rozumienie procesów automatycznego wdrażania zmian na serwer (CD)
+- praktyczne podejście do workflow opartego na mniejszych, częstszych zmianach
+
+### SDLC (Software Development Life Cycle)
+Rozumienie pełnego cyklu życia oprogramowania.
+- znajomość faz: analiza → projektowanie → implementacja → testowanie → wdrożenie → utrzymanie
+- świadomość roli programisty na każdym z tych etapów
+- podejście procesowe do budowania aplikacji (np. od koncepcji HorseOwner do jego wdrożenia)
+
+### SOLID
+Zbiór zasad projektowania obiektowego dla zachowania czystości i łatwości utrzymania kodu.
+- świadomość znaczenia pojedynczej odpowiedzialności (SRP)
+- dbałość o to, by kod był otwarty na rozbudowę, ale zamknięty na modyfikację (OCP)
+- dbanie o czytelne interfejsy i unikanie zbędnych zależności
+- stosowanie tych zasad przy modelowaniu klas i logiki biznesowej w Pythonie
+
+---
+
 ## Charakter stacku
 
 Ten stack nie jest „szeroki dla samej szerokości”. Jego logika jest spójna:
@@ -374,11 +415,12 @@ Najważniejsze elementy stacku Tomasza:
 - **Data:** pandas
 - **Scraping:** BeautifulSoup
 - **Version control:** Git, GitHub
-- **IDE / tooling:** PyCharm, PowerShell, terminal, `.venv`, pip, `.env`
+- **IDE / tooling:** PyCharm, PowerShell, terminal, `.venv`, pip, `.env`, Docker, Jira, CI/CD
 - **Knowledge workflow:** Obsidian
 - **Deployment:** PythonAnywhere
 - **AI:** OpenAI API, prompt engineering, RAG, embeddings, structured outputs, Ollama
+- **Design & Process:** SOLID, SDLC
 
 ### Słowa kluczowe do retrieval
 
-`tools and stack`, `technology stack`, `Python`, `Flask`, `Streamlit`, `SQLite`, `MySQL`, `SQLAlchemy`, `Git`, `GitHub`, `PyCharm`, `PowerShell`, `Linux`, `pandas`, `BeautifulSoup`, `requests`, `PythonAnywhere`, `OpenAI API`, `prompt engineering`, `RAG`, `Ollama`, `developer tooling`, `junior Python developer`.
+`tools and stack`, `technology stack`, `Python`, `Flask`, `Streamlit`, `SQLite`, `MySQL`, `SQLAlchemy`, `Git`, `GitHub`, `PyCharm`, `PowerShell`, `Linux`, `pandas`, `BeautifulSoup`, `requests`, `PythonAnywhere`, `OpenAI API`, `prompt engineering`, `RAG`, `Ollama`, `developer tooling`, `junior Python developer`, `Docker`, `Jira`, `CI/CD`, `Continuous Integration`, `SDLC`, `SOLID`, `software engineering practices`.

@@ -10,7 +10,7 @@ audience:
 last_updated: 2026-03-24
 version: 1.0
 source_set: profile_chunks_v1
-chunks_total: 8
+chunks_total: 9
 canonical_order:
   - 01_skills_technical_chunk.md
   - 02_projects_chunk.md
@@ -20,6 +20,7 @@ canonical_order:
   - 06_work_style_chunk.md
   - 07_goals_and_direction_chunk.md
   - 08_background_selected_chunk.md
+  - 09_education_and_certifications_chunk.md
 retrieval_priority:
   A:
     - 01_skills_technical_chunk
@@ -30,6 +31,7 @@ retrieval_priority:
     - 04_learning_path_chunk
     - 05_career_transition_chunk
     - 07_goals_and_direction_chunk
+    - 09_education_and_certifications_chunk
   C:
     - 08_background_selected_chunk
 
@@ -38,6 +40,7 @@ query_routing:
     - 01_skills_technical_chunk
     - 03_tools_and_stack_chunk
     - 02_projects_chunk
+    - 09_education_and_certifications_chunk
   projects:
     - 02_projects_chunk
     - 01_skills_technical_chunk
@@ -48,12 +51,14 @@ query_routing:
     - 01_skills_technical_chunk
   learning_path:
     - 04_learning_path_chunk
+    - 09_education_and_certifications_chunk.md
     - 01_skills_technical_chunk
     - 07_goals_and_direction_chunk
   career_transition:
     - 05_career_transition_chunk
-    - 06_work_style_chunk
+    - 09_education_and_certifications_chunk.md
     - 08_background_selected_chunk
+    - 06_work_style_chunk
   goals:
     - 07_goals_and_direction_chunk
     - 04_learning_path_chunk
@@ -62,6 +67,10 @@ query_routing:
     - 08_background_selected_chunk
     - 05_career_transition_chunk
     - 07_goals_and_direction_chunk
+  education:
+    - 09_education_and_certifications_chunk
+    - 04_learning_path_chunk
+    - 05_career_transition_chunk
 
 intent_categories:
   technical:
@@ -78,7 +87,7 @@ intent_categories:
     - skills_technical
   learning_path:
     - learning_path
-    - skills_technical
+    - education
     - goals_and_direction
   career_transition:
     - career_transition
@@ -92,6 +101,9 @@ intent_categories:
     - background_selected
     - career_transition
     - goals_and_direction
+  education:
+    - education
+    - career_transition
 
 default_bundles:
   technical_summary:
@@ -111,8 +123,8 @@ default_bundles:
     - 08_background_selected_chunk
     - 07_goals_and_direction_chunk
   learning_narrative:
+    - 09_education_and_certifications
     - 04_learning_path_chunk
-    - 01_skills_technical_chunk
     - 07_goals_and_direction_chunk
 
 intent_keywords:
@@ -138,6 +150,10 @@ intent_keywords:
     - sztuczna
     - inteligencj
     - umiejetn
+    - solid
+    - clci
+    - sdlc
+    - jira
   projects:
     - projekt
     - portfolio
@@ -206,6 +222,21 @@ intent_keywords:
     - psa
     - warsztat
     - rajczyn
+  education:
+    - studia
+    - uczelnia
+    - dyplom
+    - magister
+    - inżynier
+    - politechnika
+    - uniwersytet
+    - certyfikat
+    - kurs
+    - niemiec
+    - angielski
+    - prince
+    - aikido
+    - wykszt
 
 ---
 
@@ -277,7 +308,7 @@ To najważniejsze źródła do pytań o realne umiejętności i dowody pracy:
 ## Rejestr chunków
 
 | Nr | Plik | Kategoria | Funkcja główna | Kiedy używać |
-|---|---|---|---|---|
+|----|---|---|---|---|
 | 01 | `01_skills_technical_chunk.md` | `skills_technical` | Opis realnych kompetencji technicznych | Gdy pytanie dotyczy umiejętności, backendu, Pythona, SQL, API, testów, AI |
 | 02 | `02_projects_chunk.md` | `projects` | Najmocniejsze dowody pracy projektowej | Gdy pytanie dotyczy portfolio, projektów, MVP, HorseOwner, Mission-AIpossible |
 | 03 | `03_tools_and_stack_chunk.md` | `tools_and_stack` | Narzędzia, frameworki, środowisko, stack | Gdy pytanie dotyczy technologii, narzędzi, środowiska, deployu, workflow |
@@ -286,6 +317,8 @@ To najważniejsze źródła do pytań o realne umiejętności i dowody pracy:
 | 06 | `06_work_style_chunk.md` | `work_style` | Styl pracy, debugging, iteracyjność, ownership | Gdy pytanie dotyczy sposobu działania, jakości pracy, współpracy, podejścia do problemów |
 | 07 | `07_goals_and_direction_chunk.md` | `goals_and_direction` | Rola docelowa i kierunek rozwoju | Gdy pytanie dotyczy celów zawodowych, roli startowej, kierunku backend + AI + RAG |
 | 08 | `08_background_selected_chunk.md` | `background_selected` | Selektywnie używane tło zawodowe i osobiste | Gdy potrzebny jest kontekst wcześniejszej pracy lub geneza projektów domenowych |
+| 09 | `09_education_and_certifications_chunk.md` | `education` | Wykształcenie, certyfikaty IT/AI, językie | Gdy padają pytania o studia, certyfikaty, kursy AI, znajomość języków lub PRINCE2 |
+
 
 ---
 
@@ -307,6 +340,7 @@ Używać jako uzupełnienie lub do pytań profilowych:
 5. `04_learning_path_chunk.md`
 6. `05_career_transition_chunk.md`
 7. `07_goals_and_direction_chunk.md`
+8. `09_education_and_certifications_chunk.md`
 
 ### Priorytet C — kontekst selektywny
 Używać ostrożnie i tylko wtedy, gdy pytanie tego wymaga:
