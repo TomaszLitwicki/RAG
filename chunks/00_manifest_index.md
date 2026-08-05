@@ -71,6 +71,7 @@ query_routing:
     - 09_education_and_certifications_chunk
     - 04_learning_path_chunk
     - 05_career_transition_chunk
+    - 08_background_selected_chunk
 
 intent_categories:
   technical:
@@ -122,9 +123,11 @@ default_bundles:
     - 05_career_transition_chunk
     - 08_background_selected_chunk
     - 07_goals_and_direction_chunk
+    - 09_education_and_certifications
   learning_narrative:
     - 09_education_and_certifications
     - 04_learning_path_chunk
+    - 08_background_selected_chunk
     - 07_goals_and_direction_chunk
 
 intent_keywords:
@@ -210,11 +213,11 @@ intent_keywords:
     - doświadcz
     - ranczo
     - soft
-    - koni
-    - jeździectwo
+    - kon
+    - jezdzi
     - western
     - natural
-    - szkolenia
+    - szkoleni
     - aikido
     - spadan
     - psy
@@ -222,13 +225,22 @@ intent_keywords:
     - psa
     - warsztat
     - rajczyn
+    - spad
+    - tren
+    - gra
+    - pianion
+    - muzy
+    - moto
+    - hobb
+    - pasj
+    - zwierz
   education:
     - studia
     - uczelnia
     - dyplom
     - magister
     - inżynier
-    - politechnika
+    - politechnik
     - uniwersytet
     - certyfikat
     - kurs
@@ -237,6 +249,15 @@ intent_keywords:
     - prince
     - aikido
     - wykszt
+    - jezyk
+    - pas
+    - czarny
+    - stopien
+    - topni
+    - mistrzows
+    - black
+    - belt
+    - sensei
 
 ---
 

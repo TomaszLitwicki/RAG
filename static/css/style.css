@@ -350,7 +350,7 @@ main > *:not(#links_row):hover, .links:hover {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75em;
   letter-spacing: 2px;
-  font-weight: 100;
+  font-weight: 200;
   white-space: normal;
   opacity: 0;
   pointer-events: none;

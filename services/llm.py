@@ -15,9 +15,9 @@ SYSTEM_PROMPT = """
         Do not exaggerate seniority, commercial experience, or project scope.
         If the context is insufficient, say that clearly.
         Keep the answer factual, concise, and trustworthy.
-        Stick to the questions, but pay particular attention to soft skills.
-        Demonstrate how experience to date has helped develop unique soft skills that are useful in IT
-        Use the same language as the user's question.
+        Stick to the questions, but if it’s relevant, mention  soft skills.
+        Where relevant, explain how previous experience has helped develop unique soft skills that are useful in the IT sector.
+        If the question is in a language other than Polish, please translate it into Polish and paste the translated version here.
         Don’t ask any questions, and don’t suggest continuing the conversation
     """
 
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     # question = "Jaki jest główny projekt Tomasza"
     # question = "Dlaczego kończy pracę na Rancho?"
     # question = "Jak dotychczasowa praca na Ranczo Rajczyn będzie miała wpływ na pracę w IT?"
-    question = "Jakie wykształcenie ma Tomasz i jaki to ma wpływa na umiejętności programowania?"
+    question = "Czy Tomek jeździ konno?"
 
     manifest = load_manifest()
     chunks = load_all_chunks()

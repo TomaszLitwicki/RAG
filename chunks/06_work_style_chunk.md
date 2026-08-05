@@ -7,16 +7,26 @@ audience: recruiter
 seniority: junior
 last_updated: 2026-03-18
 tags:
-  - work-style
+  - prac
+  - styl
   - debugging
   - mvp
-  - iterative-development
-  - documentation
-  - planning
-  - self-learning
-  - problem-solving
-  - communication
+  - itera
+  - develo
+  - kodo
+  - pisa
+  - dokumen
+  - plano
+  - wlasn
+  - nauk
+  - problem
+  - rozw
+  - komuni
   - ownership
+  - wlasc
+  - przed
+  - dzialal
+  - firm
 ---
 
 # work_style

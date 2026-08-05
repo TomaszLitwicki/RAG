@@ -22,6 +22,9 @@ tags:
   - llm
   - rag
   - obsidian
+  - nauka
+  - uczen
+  - uczn
 ---
 
 # learning_path

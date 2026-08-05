@@ -7,16 +7,20 @@ audience: recruiter
 seniority: junior
 last_updated: 2026-03-18
 tags:
-  - goals-and-direction
-  - junior-python-developer
+  - cel
+  - kierun
+  - junior
+  - python
+  - develop
+  - program
   - backend
   - ai
   - llm
   - rag
-  - portfolio
-  - growth-direction
-  - remote-work
-  - product-mindset
+  - portfoli
+  - rozw
+  - zdaln
+  - mysle
 ---
 
 # goals_and_direction

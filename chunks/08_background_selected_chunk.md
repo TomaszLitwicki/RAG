@@ -7,16 +7,31 @@ audience: recruiter
 seniority: junior
 last_updated: 2026-03-18
 tags:
-  - background-selected
-  - professional-background
-  - transferable-context
+  - zmiana
+  - przyczyn
   - horse-trainer
-  - instructor
-  - ranch
-  - domain-knowledge
-  - communication
-  - discipline
-  - self-management
+  - instruktor
+  - rancz
+  - wiedza
+  - komunika
+  - dyscypli
+  - zarzadz
+  - tło
+  - profesjo
+  - trener
+  - kon
+  - psy
+  - psa
+  - rajcz
+  - pas
+  - czarn
+  - black
+  - belt
+  - aikid
+  - mistrz
+  - sztuk
+  - pianin
+  - moto
 ---
 
 # background_selected
@@ -165,3 +180,11 @@ Zmysł wizualny i dbałość o detal: Uzupełnieniem komunikacji była umiejętn
 Przejście z inżynierii do własnego biznesu: Budowa Rancza od podstaw była świadomą decyzją o odejściu od pracy korporacyjnej na rzecz pełnej samodzielności operacyjnej. Pokazuje to zdolność Tomasza do planowania złożonych projektów (od logistyki po budowanie relacji z klientami) i doprowadzania ich do sukcesu rynkowego.
 
 To doświadczenie stanowi bezpośrednią genezę projektu HorseOwner MVP i jest dowodem na to, że Tomasz potrafi łączyć głęboką wiedzę domenową z profesjonalną komunikacją i techniczną rzetelnością.
+
+Tomasz ma dwa własne konie, świetnie jeździ konno i w niemalże mistycznie intuicyjny sposób potrafi się porozumieć z każdym koniem, nawet najbardziej krnąbrnym.
+
+Dodatkowe hobby Tomasza to motocykl, ma własny, piękny, ciężki chopper Yamaha Road Star o pojemności 1700 cm3 co, jest doskonałym odpoczynkiem od realizowanych projektów zachowując zdrowy styl równowagi work-life-balance.
+
+Wieczorami lubi grać na pianinie jazz i blues. Jest to zajęcie, które wspomaga tworzenie i myślenie twórcze.
+
+Największym oczkiem w głowie Tomasza są jego dwa psy rasy Border Collie z którymi spędza większość czasu.

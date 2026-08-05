@@ -9,12 +9,19 @@ last_updated: 2026-03-18
 tags:
   - career-transition
   - junior-python-developer
-  - transferable-skills
-  - self-learning
-  - discipline
-  - problem-solving
-  - horse-trainer
-  - domain-knowledge
+  - transf
+  - skil
+  - umieje
+  - wlasn
+  - nauk
+  - dyscypli
+  - problem
+  - rozwi
+  - horse
+  - kon
+  - trener
+  - szkol
+  - wiedz
   - portfolio
 ---
 

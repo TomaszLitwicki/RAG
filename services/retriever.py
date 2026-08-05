@@ -1,6 +1,5 @@
 import re
 from typing import Any
-import unicodedata
 from services.loader import load_manifest, load_all_chunks
 
 
@@ -116,7 +115,7 @@ def score_chunk(question: str, chunk: dict, preferred_sources: list[str], prefer
     return score
 
 
-def retrieve_chunks (question: str, chunks: list[dict], manifest: dict, top_k = 3, min_score: int = 15) -> list[dict]:
+def retrieve_chunks (question: str, chunks: list[dict], manifest: dict, top_k = 3, min_score: int = 12) -> list[dict]:
     query_type = detect_query_type(question, manifest)
     preferred_source = get_preferred_sources(query_type, manifest)
     preferred_categories = get_preferred_categories(query_type, manifest)
@@ -170,6 +169,7 @@ if __name__ == '__main__':
     ask = "Jaki wpływa praca na Ranczo Rajczyn będzie miała na pracę w IT?"
     ask = "Jakie umiejętności posiada TOmasz?"
     ask = "Jakie wykształcenie ma Tomasz i jaki to ma wpływa na umiejętności programowania?"
+    ask = "Czy TOmasz gra na pianinie"
     manifest = load_manifest()
     chunks = load_all_chunks()
 

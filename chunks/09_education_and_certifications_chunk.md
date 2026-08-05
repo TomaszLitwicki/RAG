@@ -7,15 +7,20 @@ audience: recruiter
 seniority: junior
 last_updated: 2026-04-03
 tags:
-  - education
-  - university
-  - master-degree
-  - prince2
+  - uniwersy
+  - master
+  - prince
   - python
   - ai
   - languages
-  - soft-skills
+  - soft
+  - skil
+  - miekk
   - aikido
+  - sztuk
+  - magist
+  - inzy
+  - walk
   - wykszt
   - tytul
   - uczeln

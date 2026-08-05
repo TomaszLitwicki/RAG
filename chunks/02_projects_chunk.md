@@ -7,8 +7,10 @@ audience: recruiter
 seniority: junior
 last_updated: 2026-03-18
 tags:
-  - horseowner
-  - mission-aipossible
+  - horse
+  - owner
+  - mission
+  - aipossible
   - flask
   - sqlite
   - openai-api
