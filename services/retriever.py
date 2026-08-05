@@ -171,6 +171,7 @@ if __name__ == '__main__':
     ask = "Jakie wykształcenie ma Tomasz i jaki to ma wpływa na umiejętności programowania?"
     ask = "Czy TOmasz gra na pianinie"
     ask = "Jaka jest stolica francji?"
+    ask = "Jakie umiejętności techniczne ma tomasz?"
     manifest = load_manifest()
     chunks = load_all_chunks()
 

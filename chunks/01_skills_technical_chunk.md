@@ -22,6 +22,10 @@ tags:
   - tooling
   - ai
   - llm
+  - umiejetnosc
+  - kompetencj
+  - techniczn
+  - skill
 ---
 
 # skills_technical
