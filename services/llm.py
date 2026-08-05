@@ -1,4 +1,10 @@
-from openai import OpenAI
+from openai import (
+    OpenAI,
+    APITimeoutError,
+    RateLimitError,
+    APIConnectionError,
+    APIStatusError,
+)
 from dotenv import load_dotenv
 import os
 
@@ -17,8 +23,9 @@ SYSTEM_PROMPT = """
         Keep the answer factual, concise, and trustworthy.
         Stick to the questions, but if it’s relevant, mention  soft skills.
         Where relevant, explain how previous experience has helped develop unique soft skills that are useful in the IT sector.
-        If the question is in a language other than Polish, please translate it into Polish and paste the translated version here.
-        Don’t ask any questions, and don’t suggest continuing the conversation
+        Don’t ask any questions, and don’t suggest continuing the conversation.
+        Answer in the same language as the user's question: English question, English answer; Polish question, Polish answer.
+        The context is written in Polish regardless of the question language — translate the relevant facts into the answer language instead of quoting them verbatim.
     """
 
 def build_contex(selected_chunks: list[dict]) -> str:
@@ -52,22 +59,35 @@ def build_prompt(question, contex):
 
 def call_llm(question: str, selected_chunks: list[dict]) -> str:
     if not AI_KEY:
-        return "BŁĄD PO STRONIE DEVELOPERA: Brak klucza OPEN AI KEY"
+        print("CONFIG ERROR: OPENAI_API_KEY is not set")
+        return "The AI assistant is not available right now."
 
     contex = build_contex(selected_chunks)
     if contex == "":
-        return "Brak odpowiednich źródeł na to pytanie. Model AI nie może odpowiedzieć."
+        return "I don't have sources covering that question, so I can't answer it."
     prompt = build_prompt(question, contex)
 
-    response = client.responses.create(
-        model="gpt-5-nano",
-        instructions=SYSTEM_PROMPT,
-        input=prompt
-    )
+    try:
+        response = client.responses.create(
+            model="gpt-5-nano",
+            instructions=SYSTEM_PROMPT,
+            input=prompt,
+            timeout=30,
+        )
+    except APITimeoutError:
+        return "The AI model did not respond in time. Please try again."
+    except RateLimitError:
+        return "The AI model is busy right now. Please try again in a moment."
+    except (APIConnectionError, APIStatusError) as error:
+        print(f"LLM ERROR: {error!r}")
+        return "The AI model is temporarily unavailable. The retrieved sources are shown above."
+    except Exception as error:
+        print(f"UNEXPECTED LLM ERROR: {error!r}")
+        return "Something went wrong while generating the answer. Please try again."
 
-    answer = str(response.output_text)
+    answer = str(response.output_text or "").strip()
     if not answer:
-        return "Model AI nie zwrócił poprawnej odpowiedzi... Spróbuj jeszcze raz"
+        return "The AI model returned an empty answer. Please try again."
 
     return answer
 

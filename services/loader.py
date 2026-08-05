@@ -1,5 +1,6 @@
 from pathlib import Path
 import yaml
+from functools import lru_cache
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CHUNKS_DIR = BASE_DIR / "chunks"
@@ -42,12 +43,13 @@ def load_markdown_chunk (file_path: Path) -> dict:
 
     return chunk
 
-
+@lru_cache(maxsize=1)
 def load_manifest () -> dict:
     manifest = load_markdown_chunk(MANIFEST_PATH)
 
     return manifest
 
+@lru_cache(maxsize=1)
 def load_all_chunks () -> list[dict]:
     chunks = []
     for plik in CHUNKS_DIR.rglob("*.md"):

@@ -10,7 +10,7 @@ from services.llm import call_llm
 
 app = Flask(__name__)
 
-app.secret_key = 'Really_secret_key'
+app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
 
 
@@ -49,7 +49,10 @@ def asking():
     sources = format_sources(selected_chunks)
     answer = call_llm(question, selected_chunks)
 
-    memory(question, answer)
+    try:
+        memory(question, answer)
+    except OSError as error:
+        print(f"MEMORY WRITE FAILED: {error!r}")
 
     session['question'] = question
     session['sources'] = sources

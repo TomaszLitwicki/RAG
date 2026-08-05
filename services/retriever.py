@@ -93,7 +93,7 @@ def score_chunk(question: str, chunk: dict, preferred_sources: list[str], prefer
 
     if source_file in preferred_sources:
         position = preferred_sources.index(source_file)
-        score = 12 - (position * 2)
+        score = 9 - (position * 2)
 
     if category and category in preferred_categories:
         score += 3
@@ -115,7 +115,7 @@ def score_chunk(question: str, chunk: dict, preferred_sources: list[str], prefer
     return score
 
 
-def retrieve_chunks (question: str, chunks: list[dict], manifest: dict, top_k = 3, min_score: int = 12) -> list[dict]:
+def retrieve_chunks (question: str, chunks: list[dict], manifest: dict, top_k = 3, min_score: int = 13) -> list[dict]:
     query_type = detect_query_type(question, manifest)
     preferred_source = get_preferred_sources(query_type, manifest)
     preferred_categories = get_preferred_categories(query_type, manifest)
@@ -170,6 +170,7 @@ if __name__ == '__main__':
     ask = "Jakie umiejętności posiada TOmasz?"
     ask = "Jakie wykształcenie ma Tomasz i jaki to ma wpływa na umiejętności programowania?"
     ask = "Czy TOmasz gra na pianinie"
+    ask = "Jaka jest stolica francji?"
     manifest = load_manifest()
     chunks = load_all_chunks()
 
